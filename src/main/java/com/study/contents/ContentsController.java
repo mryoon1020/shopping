@@ -202,6 +202,16 @@ public class ContentsController {
     return "/contents/create";
   }
 
+  @GetMapping("/contents/read/{contentsno}")
+  public String read(@PathVariable ("contentsno") int contentsno, Model model) {
+    
+    log.info("read contents no:"+contentsno);
+    service.read(contentsno);
+    model.addAttribute("dto",service.read(contentsno));
+    
+    return "/contents/read";
+  }
+  
   @RequestMapping("/contents/list")
   public String list(HttpServletRequest request) {
     // 검색관련------------------------

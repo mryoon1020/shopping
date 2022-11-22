@@ -10,6 +10,8 @@
     
 img {
   display:inline;
+  width: 95%;
+  height: 85%;
  
 }
  
@@ -18,9 +20,10 @@ img {
 <body> 
  
 <div class="container">
-    <p><a href="/content/mainlist" >SHOP NOW</a></p>
-    <img src="/images/jeans.jpg" alt="Jeans">
-    
+    <h1><p><a href="/contents/mainlist/1" >SHOP NOW</a></p></h1><br>
+    <a href="/contents/mainlist/1" >
+    <img src="/images/iloveshopping.jpg" alt="I love shopping">
+    </a>
 </div>
 </body> 
 </html>

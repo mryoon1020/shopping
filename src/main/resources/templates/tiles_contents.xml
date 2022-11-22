@@ -27,6 +27,10 @@
     <definition name="/contents/detail" extends="main"> 
             <put-attribute name="title" value="상품상세페이지" ></put-attribute> 
             <put-attribute name="body" value="/WEB-INF/views/contents/detail.jsp" /> 
-    </definition>    
+    </definition>
+    <definition name="/contents/read" extends="main"> 
+            <put-attribute name="title" value="관리자페이지상품내용" ></put-attribute> 
+            <put-attribute name="body" value="/WEB-INF/views/contents/read.jsp" /> 
+    </definition>   
 
 </tiles-definitions>

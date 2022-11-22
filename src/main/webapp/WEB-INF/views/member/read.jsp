@@ -34,6 +34,7 @@
 	  url += "&oldfile=${dto.fname}";
 	  location.href = url;
   }
+  
   </script>
 </head>
 <body>
@@ -85,7 +86,7 @@
  </table>
  <div style="text-align: center">
  <button class="btn btn-default" onclick="updateM()">정보수정</button>
- <c:if test="${not empty sessionScope.id and sessionScope.grade != 'A'}">
+ <c:if test="${not empty sessionScope.id and sessionScope.grade == 'A'}">
  <button class="btn btn-default" onclick="updateFile()">사진수정</button>
  <button class="btn btn-default" onclick="updatePw()">패스워드변경</button>
  <button class="btn btn-default" 
@@ -96,7 +97,6 @@
  <button class="btn btn-default" onclick="location.href='list'">회원목록</button>
  </c:if>
  </div>
- 
  <br>
  
 </div>

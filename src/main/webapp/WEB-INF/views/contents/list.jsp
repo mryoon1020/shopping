@@ -12,10 +12,11 @@
    <script type="text/javascript">
      function read(contentsno){
        var url = "read";
-       url += "?contentsno="+contentsno;
-       url += "&col=${col}";
-       url += "&word=${word}";
-       url += "&nowPage=${nowPage}";
+       url+="/"+contentsno;
+//       url += "?contentsno="+contentsno;
+//       url += "&col=${col}";
+//       url += "&word=${word}";
+//       url += "&nowPage=${nowPage}";
        location.href=url;
  
      }

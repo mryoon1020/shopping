@@ -33,6 +33,15 @@
              return false;
      }
 }
+ 
+function list(){
+	let url = '/contents/list';
+  	url += "?nowPage=${param.nowPage}";
+  	url += "&col=${param.col}";
+  	url += "&word=${param.word}";
+  	location.href = url;
+} 
+ 
  </script>
 </head>
 <body> 
@@ -91,6 +100,7 @@
    <div class="col-sm-offset-2 col-sm-5">
     <button class="btn">수정</button>
     <button type="reset" class="btn">취소</button>
+    <button class="btn" onclick="list()">목록</button>
    </div>
  </div>
 </form>
