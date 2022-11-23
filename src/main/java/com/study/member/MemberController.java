@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -191,15 +192,21 @@ public class MemberController {
     int cnt = service.updateFile(map);
 
     if (cnt == 1) {
-      return "redirect:./";
+      return "redirect:./mypage";
     } else {
       return "./error";
     }
   }
 
-  @GetMapping("/member/updateFile")
-  public String updateFileForm() {
+  @GetMapping("/member/updateFile/{id}/{oldfile}")
+  public String updateFileForm(@PathVariable("id") String id, @PathVariable("oldfile") String oldfile,
+      Model model) {
 
+    model.addAttribute("id", id);
+    model.addAttribute("oldfile", oldfile);
+    
+    log.info(oldfile);
+    
     return "/member/updateFile";
   }
 

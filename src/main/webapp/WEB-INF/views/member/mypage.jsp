@@ -16,7 +16,12 @@
   <h3><span class="glyphicon glyphicon-user"></span> 나의 정보</h3>
   <img class="img-rounded" src="/member/storage/${dto.fname}" style="width:280px">${dto.fname}
   <div class="caption">
-    <p>ID:${dto.id}, 성명:${dto.mname}</p>
+    <p><a href="./updateFile/${id}/${dto.fname}">
+    <span class="glyphicon glyphicon-picture"></span>&nbsp;이미지 수정
+    </a>
+    </p>
+    <p>ID:${dto.id}</p>
+    <p>성명:${dto.mname}</p>
     <p>배송지:(${dto.zipcode })${dto.address1 }  ${dto.address2}</p>
   </div>
   </div>

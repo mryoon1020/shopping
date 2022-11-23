@@ -10,7 +10,7 @@ public class UploadCon {
         String path = "";
         if (File.separator.equals("\\")) {
             path = "d:/aistudy/deploy/contents/storage/";
-            System.out.println("Windows 10: " + path);
+            System.out.println("Windows 11: " + path);
             
         } else {
             // System.out.println("Linux");
