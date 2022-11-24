@@ -40,4 +40,15 @@
 
 - 2022-11-23
   - mypage에서 사용자(user)가 이미지 파일 변경할 수 있도록 적용
+    - 자주 혼동하는 것
+      - jsp에서 직접 데이터를 호출방법
+      - model.setAttribute("이름",호출내용) 을 설정을 해주면 직접 호출가능
+      - HttpServletRequest 를 통해 jsp에서 직접데이터를 가져올수 있음(getAttribute, getParameter)
+      - setAttribute도 가능
+      - HttpSession 을 통해서도 가능함
   - 관리자 상품 수정 페이지에서 이미지를 수정 할 수 있도록 이미지 변경페이지 추가
+
+- 2022-11-24
+  - 관리자용 페이지인 contents list에 상품 삭제 기능추가
+    - 삭제는 정상적으로 되고 있으나 `redirect:./list` 또는 `/contents/list` 가 실행되지않음
+    - 계속 오류 찾고 잇는중

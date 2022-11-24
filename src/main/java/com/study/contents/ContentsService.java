@@ -5,6 +5,8 @@ import java.util.Map;
 
 public interface ContentsService {
 
+  int delete(int contentsno);
+  
   int create(ContentsDTO dto);
 
   int update(ContentsDTO dto);

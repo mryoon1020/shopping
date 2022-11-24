@@ -30,6 +30,20 @@ public class ContentsController {
   @Qualifier("com.study.contents.ContentsServiceImpl")
   private ContentsService service;
 
+  @GetMapping("/contents/delete/{contentsno}/{oldfile}")
+  public String delete(@PathVariable("contentsno") int contentsno, @PathVariable("oldfile") String oldfile, HttpServletRequest request ) {
+    
+    if(oldfile != null) {
+      String basePath = UploadCon.getUploadDir();
+      service.delete(contentsno);
+      Utility.deleteFile(basePath, oldfile);
+      return "/contents/list";
+    }else {
+      service.delete(contentsno);
+      return "contents/list";
+    }
+  }
+  
   @GetMapping("/contents/detail/{contentsno}")
   public String detail(@PathVariable("contentsno") int contentsno, 
       Model model, HttpServletRequest request) {

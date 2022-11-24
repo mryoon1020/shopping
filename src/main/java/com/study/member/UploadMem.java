@@ -10,7 +10,7 @@ public class UploadMem {
         String path = "";
         if (File.separator.equals("\\")) {
             path = "d:/aistudy/deploy/member/storage/";
-            System.out.println("Windows 10: " + path);
+            System.out.println("Windows 11: " + path);
             
         } else {
             // System.out.println("Linux");

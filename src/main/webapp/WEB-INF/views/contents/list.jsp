@@ -101,7 +101,7 @@
           <span class="glyphicon glyphicon-edit"></span>
         </a>
         /
-        <a href="./delete/${dto.contentsno }">
+		  <a href="./delete/${dto.contentsno }/${dto.filename}">
           <span class="glyphicon glyphicon-trash"></span>
         </a>
         /
