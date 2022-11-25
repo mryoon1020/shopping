@@ -4,6 +4,10 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
  
 <tiles-definitions>
+	<definition name="/order/read" extends="main"> 
+            <put-attribute name="title" value="주문목록페이지상품내용" ></put-attribute> 
+            <put-attribute name="body" value="/WEB-INF/views/order/read.jsp" /> 
+    </definition>
     <definition name="/order/create" extends="main"> 
             <put-attribute name="title" value="주문서" ></put-attribute> 
             <put-attribute name="body" value="/WEB-INF/views/order/createForm.jsp" /> 

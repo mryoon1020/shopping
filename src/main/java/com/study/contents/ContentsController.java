@@ -37,10 +37,10 @@ public class ContentsController {
       String basePath = UploadCon.getUploadDir();
       service.delete(contentsno);
       Utility.deleteFile(basePath, oldfile);
-      return "/contents/list";
+      return "redirect:contents/list";
     }else {
       service.delete(contentsno);
-      return "contents/list";
+      return "redirect:contents/list";
     }
   }
   

@@ -10,12 +10,13 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
    <script type="text/javascript">
-     function read(orderno){
-       var url = "read";
-       url += "?orderno="+orderno; 
-       url += "&col=${col}";
-       url += "&word=${word}";
-       url += "&nowPage=${nowPage}";
+     function read(contentsno){
+       var url = "../contents/read";
+       	url+="/"+contentsno;
+//       url += "?orderno="+orderno; 
+//       url += "&col=${col}";
+//       url += "&word=${word}";
+//       url += "&nowPage=${nowPage}";
        location.href=url;
  
      }
@@ -96,7 +97,7 @@
     <td>${dto.mname}(${dto.id})</td>
     <td> 
     <c:forEach var="odto" items="${dto.list}">
-    <a href="javascript:read('${odto.odno}')">${odto.pname}(size:${odto.size}/수량:${odto.quantity })</a>
+    <a href="javascript:read('${odto.contentsno}')">${odto.pname}(size:${odto.size}/수량:${odto.quantity })</a>
     <c:if test="${util:newImg(dto.odate) }">
          <img src="/images/new.gif"> 
     </c:if> 

@@ -6,6 +6,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.study.contents.ContentsDTO;
+
 @Service("com.study.orders.OrderServiceImpl")
 public class OrderServiceImpl implements OrderService {
   
@@ -47,6 +49,12 @@ public class OrderServiceImpl implements OrderService {
   public int updateState(Map map) {
     // TODO Auto-generated method stub
     return mapper.updateState(map);
+  }
+
+  @Override
+  public ContentsDTO read(int contentsno) {
+    // TODO Auto-generated method stub
+    return mapper.read(contentsno);
   }
   
 

@@ -22,7 +22,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         where contentsno = #{conentsno}
     </select>
 	<select id="read" parameterType="int" resultType="com.study.contents.ContentsDTO">
-		select contentsno, cateno, pname, price, filename, detail, stock 
+		select contentsno, cateno, pname, price, filename, detail, stock, rdate 
 		from contents 
 		where contentsno = #{contentsno}
 	</select>

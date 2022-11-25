@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <script>
   	function list(){
-  		let url = '/contents/list';
+  		let url = '/admin/order/list';
 //  		url += "?nowPage=${param.nowPage}";
 //  		url += "&col=${param.col}";
 //  		url += "&word=${param.word}";
@@ -52,7 +52,7 @@
 	<button onclick="location.href='/contents/create'" class="btn btn-default">등록</button>
 	<button onclick="update()" class="btn btn-default">수정</button>
 	<button onclick="updateImg()" class="btn btn-default">이미지수정</button>
-	<button onclick="list()" class="btn btn-default">목록</button>
+	<button onclick="list()" class="btn btn-default">주문목록</button>
 	
 </div>
 </div>
