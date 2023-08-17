@@ -347,12 +347,6 @@ public class MemberController {
     return map;
   }
 
-  @GetMapping
-  public String home() {
-
-    return "/home";
-  }
-
   @GetMapping("/member/agree")
   public String agree() {
 
@@ -364,4 +358,9 @@ public class MemberController {
     return "/member/create";
   }
 
+  @GetMapping
+  public String home() {
+
+    return "/home";
+  }
 }

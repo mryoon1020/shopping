@@ -96,7 +96,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="update"
 		parameterType="com.study.contents.ContentsDTO">
 		update contents
-		set pname =#{pname},
+		set 
+		cateno = #{cateno},
+		pname =#{pname},
 		price = #{price},
 		detail = #{detail},
 		stock = #{stock}

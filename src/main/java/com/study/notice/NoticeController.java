@@ -28,7 +28,7 @@ public class NoticeController {
   
   @GetMapping("/admin/notice/delete")
   public String delete(int noticeno) {
-    return "/notice/delete";
+    return "/notice/deleteForm";
   }
   
   @PostMapping("/notice/delete")

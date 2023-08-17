@@ -1,13 +1,102 @@
 # Spring Boot 기반 쇼핑몰 프로젝트
 
-> ## 쇼핑몰 프로젝트 기능
+## Intro
 
-------
+- Spring boot를 활용한 쇼핑몰 프로젝트 입니다
+- 기능
+  - 회원가입/수정/탈퇴/목록
+  - 로그인/로그아웃
+  - 상품등록/상품목록/상품수정
+  - 장바구니 등록/삭제
 
-- 회원가입/수정/탈퇴/목록
-- 로그인/로그아웃
-- 상품등록/상품목록/상품수정
-- 장바구니 등록/삭제
+
+## Tech Stack
+
+- **Spring boot**
+- **Gradle**
+- **MyBatis**
+- **Fetch API**
+- **jQuery**
+- **mySQL**
+
+## Service process
+
+- Shopping mall의 API 호출 과정입니다.
+
+> ## ERD
+
+- Shopping 프로젝트의 ERD 입니다
+
+![](./img/shopping.png)
+
+## API
+
+### Cart
+
+- **prefix :** `/cart`
+- 장바구니 물품 삭제 `GET /delete/{cartno}`
+- 장바구니 목록 `GET /list`
+- 장바구니 담기 `POST /create`
+
+### Contents
+
+- **prefix :** `/contents`
+- 제품 이미지 삭제 `GET /delete/{contentsno}/{oldfile}`
+- 상품상세 페이지 `GET /detail/{contentsno}`
+- 상품목록 `GET /mainlist/{cateno}`
+- 상품 카테고리 가져오기 `GET /getCategory`
+- 상품 이미지 수정 `POST /updateFile`
+- 상품 이미지 수정양식 `GET /updateFile/{contentsno}/{oldfile}`
+- 상품 수정 `POST /update`
+- 상품 수정 양식 `GET /update/{contentsno}`
+- 상품등록(관리자) `POST /create`
+- 상품상세 페이지(관리자) `GET /read/{contentsno}`
+- 상품목록(관리자) `GET /list`
+- 상품 등록 양식(관리자) `GET /admin/contents/create`
+
+### Member
+
+- **prefix :** `/member`
+- ID 찾기 `GET /idfind`
+- ID 찾기 결과 return `GET /idfindex`
+- PW 찾기 `GET /pwfind`
+- PW 찾기 결과 return `GET /pwfindex`
+- 회원 상세정보(관리자) `GET /read`
+- 회원 상세정보(유저) `GET /mypage`
+- 회원목록(관리자) `GET/admin/member/list`
+- 회원정보 수정 `POST /update`
+- 회원정보 수정양식 `GET /update`
+- 회원이미지 변경 `POST /updateFile`
+- 회원 이미지 변경 양식 `GET /updateFile/{id}/{oldfile}`
+- log out `GET /logout`
+- log in `POST /login`
+- log in 페이지 `GET login`
+- 회원가입 `POST /create`
+- 이메일 중복확인 `GET /member/emailcheck`
+- ID 중복확인 `GET /member/idcheck`
+- 이용약관 `GET /agree`
+- 회원가입 양식 `POST /createForm`
+- 메인 페이지 `GET /`
+
+### Notice
+
+- **prefix :** `/notice`
+- 공지삭제양식(관리자) `GET /admin/notice/delete`
+- 공지삭제`POST /delete`
+- 공지수정 양식(관리자) `GET /admin/notice/update`
+- 공지수정 `POST /update`
+- 공지 읽기 `GET /read`
+- 공지생성 양식 `GET /admin/notice/create`
+- 공지생성 `POST /create`
+- 공지목록 `GET /list`
+
+### Order
+
+### Review
+
+
+
+
 
 > ## 추가적으로 구현할 기능
 
