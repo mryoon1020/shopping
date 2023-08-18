@@ -21,9 +21,11 @@
 
 ## Service process
 
-- Shopping mall의 API 호출 과정입니다.
+- Shopping mall의 API 호출 과정입니다
 
-> ## ERD
+![](./img/shoppingService.png)
+
+## ERD
 
 - Shopping 프로젝트의 ERD 입니다
 
@@ -50,7 +52,7 @@
 - 상품 수정 `POST /update`
 - 상품 수정 양식 `GET /update/{contentsno}`
 - 상품등록(관리자) `POST /create`
-- 상품상세 페이지(관리자) `GET /read/{contentsno}`
+- 상품상세 페이지(관리자) `GET /admin/contents/read/{contentsno}`
 - 상품목록(관리자) `GET /list`
 - 상품 등록 양식(관리자) `GET /admin/contents/create`
 
@@ -76,7 +78,7 @@
 - ID 중복확인 `GET /member/idcheck`
 - 이용약관 `GET /agree`
 - 회원가입 양식 `POST /createForm`
-- 메인 페이지 `GET /`
+- 메인 페이지(prefix 없이) `GET /`
 
 ### Notice
 
@@ -92,9 +94,23 @@
 
 ### Order
 
+- **prefix :** `/order`
+- 주문상태 수정 `POST /update`
+- 주문 목록 `GET /admin/order/list`
+- 주문하기 `POST /create/{str}`
+- 주문 장바구니에 담기 `GET /create/cart/{cno}/{qty}/{size}`
+- 주문 및 결제페이지 이동 `GET create/order/{contentsno}/{qty}/{size}`
+
 ### Review
 
+- **prefix :** `/review`
 
+- 댓글 목록 조회 `GET /list/{contentsno}/{sno}/{eno}`
+- 댓글 페이지네이션 `GET /page`
+- 댓글 등록 `POST /create`
+- 댓글수정 모달창 불러오기 `GET /{rnum}`
+- 댓글 수정 `PUT /`
+- 댓글 삭제 `DELETE /{rnum}`
 
 
 
@@ -118,6 +134,11 @@
 
 
 > ## PatchNote
+
+- 2023-08-18
+  - 유저용 상품 디테일페이지 댓글창 페이지이동이 안되는 오류 해결
+
+---
 
 - 2022-11-22
   - 관리자 상품목록에서 관리자 전용 상품페이지 이동추가

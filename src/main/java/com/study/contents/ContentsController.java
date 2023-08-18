@@ -216,7 +216,7 @@ public class ContentsController {
     return "/contents/create";
   }
 
-  @GetMapping("/contents/read/{contentsno}")
+  @GetMapping("/admin/contents/read/{contentsno}")
   public String read(@PathVariable ("contentsno") int contentsno, Model model) {
     
     log.info("read contents no:"+contentsno);

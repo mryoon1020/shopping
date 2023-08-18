@@ -49,16 +49,6 @@ public class OrderController {
   @Qualifier("com.study.cart.CartServiceImpl")
   private CartService cartservice;
   
-  @GetMapping("/admin/contents/read/{contentsno}")
-  public String read(@PathVariable ("contentsno") int contentsno, Model model) {
-    
-    log.info("read contents no:"+contentsno);
-    service.read(contentsno);
-    model.addAttribute("dto",service.read(contentsno));
-    
-    return "/order/read";
-  }  
-  
   @PostMapping("/order/update")
   @ResponseBody
   public String update(@RequestBody Map map) {

@@ -11,7 +11,7 @@
   <meta charset="utf-8">
    <script type="text/javascript">
      function read(contentsno){
-       var url = "read";
+       var url = "/admin/contents/read";
        url+="/"+contentsno;
 //       url += "?contentsno="+contentsno;
 //       url += "&col=${col}";

@@ -48,7 +48,7 @@ public class ReviewController {
      int nPage, int contentsno) {
 
     int total = service.total(contentsno);
-    String url = "read";
+    String url = "";
 
     int recordPerPage = 3; // 한페이지당 출력할 레코드 갯수
 
