@@ -106,34 +106,19 @@
 - **prefix :** `/review`
 
 - 댓글 목록 조회 `GET /list/{contentsno}/{sno}/{eno}`
+
 - 댓글 페이지네이션 `GET /page`
+
 - 댓글 등록 `POST /create`
+
 - 댓글수정 모달창 불러오기 `GET /{rnum}`
+
 - 댓글 수정 `PUT /`
+
 - 댓글 삭제 `DELETE /{rnum}`
 
 
-
-> ## 추가적으로 구현할 기능
-
-------
-
-- 상품구매 삭제, 추가기능
-- 나의정보 페이지에서 이미지 수정기능 및 회원 수정페이지로 바로 이동할 수있는 버튼
-
-> ## Spring DI/AOP 사용
-
-------
-
-- Controller/Service/DAO
-- Transaction 기능
-
-> ## Mysql Mybatis
-
-------
-
-
-> ## PatchNote
+## PatchNote & Truoble shooting
 
 - 2023-08-18
   - 유저용 상품 디테일페이지 댓글창 페이지이동이 안되는 오류 해결
@@ -166,3 +151,13 @@
     - `redirect:contents/list` 를 사용 했을때 정상작동함
     - 분명 24일 실행할때는 동작하지 않았었는데 현재는 가능해짐
   - 주문목록페이지에서 관리자용 read 페이지로 이동할 수 있게 설정
+
+<details> <summary>완료</summary>
+    <div markdown="1">
+        <p>
+	 추가적으로 구현할 기능(완료)<br>
+		- 상품구매 삭제, 추가기능<br>
+		- 나의정보 페이지에서 이미지 수정기능 및 회원 수정페이지로 바로 이동할 수있는 버튼
+        </p>
+    </div>
+</details>
